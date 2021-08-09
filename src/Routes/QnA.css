@@ -1,0 +1,64 @@
+.main {
+  margin-bottom: 70px;
+}
+.title_fnq {
+  margin: 70px auto;
+  width: 98px;
+  height: 50px;
+  background-image: url("../images/qna/title_faq.gif");
+}
+.qna {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px #a1a5ad solid;
+}
+.qna:last-child {
+  border-bottom: 1px #a1a5ad solid;
+}
+.question, .answer {
+  position: relative;
+  line-height: 28px;
+}
+.question {
+  padding: 30px 60px;
+  font-size: 20px;
+  color: #1b1d21;
+}
+.question:hover {
+  cursor: pointer;
+}
+.answer {
+  display: none;
+  padding: 30px 60px;
+  font-size: 16px;
+  color: #60656e;
+  background-color: #f7f8fa;
+}
+.answer.open {
+  display: block;
+}
+.icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 60px;
+  background-repeat: no-repeat;
+}
+.icon_q, .icon_a {
+  background-size: 30px;
+  background-position: 15px 30px;
+}
+.icon_q {
+  left: 0;
+  background-image: url("../images/qna/icon_question.png");
+}
+.icon_a {
+  left: 0;
+  background-image: url("../images/odc_logo.png");    
+}
+.show_more {
+  right: 0;
+  background-image: url("../images/qna/icon_arrow_down.gif");
+  background-position: 50% 38px;
+}

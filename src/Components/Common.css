@@ -42,8 +42,16 @@
 .header .menu_item {
   padding: 0 20px;
 }
-footer {
-  text-align: center;
+.main {
+  min-height: calc(100vh - 134px);
+  /* header: 70, footer: 64 */
+  max-width: 1000px;
+  /* 최대 width 1000px 고정 */
+  margin: 0 auto;
+}
+.footer {
+  height: 14px;
   font-size: 14px;
+  text-align: center;
   padding: 25px 0;
 }
