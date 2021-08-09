@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 70px;
+  font-size: 22px;
+  line-height: 70px;
+}
+.header .menu_logo {
+  width: 70px;
+  height: 70px;
+  background-image: url("../images/odc_logo.png");
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.menu_links .menu_link {
+  width: 32px;
+  height: 32px;
+  margin-top: 19px;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.menu_links .link_ist {
+  background-image: url("../images/instagram_logo.png");
+  border-radius: 5px;
+}
+.menu_links .link_fb {
+  background-image: url("../images/facebook_logo.png");
+}
+.menu_links .link_yt {
+  background-image: url("../images/youtube_logo.png");
+}
+.header a {
+  display: block;
+}
+.header .menu_items,
+.header .menu_links {
+  display: flex;
+}
+.header .menu_item {
+  padding: 0 20px;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 25px 0;
+}
