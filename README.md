@@ -6,8 +6,8 @@
 
 2. (JSX) `class` -> `className`
 
-    (`import styled from "styled-components";` 사용 X)
+    (--> 후에 `styled-components`, `withRouter` 사용하여 메뉴 언더바)
 
-    (--> 후에 withRouter 사용하여 메뉴 언더바)
-
-3. 
+3. React를 사용할 때 DOM 엘리먼트가 생성된 후 리스너를 추가하기 위해 **addEventListener를 호출할 필요가 없다.** 
+    
+    대신, 엘리먼트가 처음 렌더링될 때 **JSX를 사용하여 리스너를 제공 (ex> onClick={toggling})**하면 된다.
