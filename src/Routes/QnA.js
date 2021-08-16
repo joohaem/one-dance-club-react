@@ -1,7 +1,8 @@
 import React from "react";
-import "./QnA.css";
 import arrowDown from "../images/qna/icon_arrow_down.gif";
 import arrowUp from "../images/qna/icon_arrow_up.gif";
+import "../Components/Common.css";
+import "./QnA.css";
 
 export default () => {
   const toggling = (e) => {
@@ -18,7 +19,7 @@ export default () => {
   }
 
   return (
-  <main className="main">
+  <main className="main animationY_section">
     <h1 className="title_fnq"><span className="visually_hidden">FAQ</span></h1>
     <section className="qna">
         <div className="question" onClick={toggling}>

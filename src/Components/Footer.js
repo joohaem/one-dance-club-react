@@ -1,8 +1,15 @@
 import React from "react";
-import "./Common.css";
+import imgIns from "../images/instagram_logo.png";
 
 export default () => (
   <footer className="footer">
-      @이주함 @이지호
+    <a className="ist_link" href="https://instagram.com/joamjoam_2/" target="_blank">
+        <img src={imgIns} className="footer_logo" alt="인스타그램" />
+        @joamjoam_2
+      </a>
+      <a className="ist_link" href="https://www.instagram.com/ps_noback/" target="_blank">
+        <img src={imgIns} className="footer_logo" alt="인스타그램" />
+        @ps_noback
+      </a>  
   </footer>
 );

@@ -7,6 +7,7 @@ import Portfolio from "../Routes/Portfolio";
 import QnA from "../Routes/QnA";
 import Contact from "../Routes/Contact";
 import Footer from "./Footer";
+import "./Common.css";
 
 
 export default () => ( 

@@ -1,6 +1,15 @@
+h1 {
+  font-size: 30px;
+  font-weight: inherit;
+}
+h2 {
+  font-size: 24px;
+  font-weight: inherit;
+}
 .header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100vw;
   height: 70px;
   font-size: 22px;
@@ -15,9 +24,8 @@
   background-repeat: no-repeat;
 }
 .menu_links .menu_link {
-  width: 32px;
-  height: 32px;
-  margin-top: 19px;
+  width: 26px;
+  height: 26px;
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,17 +49,84 @@
 }
 .header .menu_item {
   padding: 0 20px;
+  transition: all 0.3s;
 }
+.header .menu_item:hover {
+  font-weight: 600;
+}
+
 .main {
   min-height: calc(100vh - 134px);
   /* header: 70, footer: 64 */
   max-width: 1000px;
   /* 최대 width 1000px 고정 */
-  margin: 0 auto;
+  margin: 100px auto;
+  /* 위아래 100px 임시 고정 */
+  
 }
+
+
 .footer {
+  background-color: #eee;
   height: 14px;
   font-size: 14px;
   text-align: center;
   padding: 25px 0;
+}
+.footer .ist_link {
+  display: inline-block;
+  transition: all 1s;
+}
+.footer .ist_link:hover {
+  background-color: #ddd;
+}
+.footer .footer_logo{
+  width: 14px;
+  vertical-align: top;
+  margin: 0 5px;
+}
+.visually_hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+@keyframes appearSectionAnimation{
+  from{
+      opacity: 0;
+  }
+  to{
+      transform: none;
+      opacity: 1;
+  }
+}
+
+.animationX_section {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: appearSectionAnimation 1s ease-in-out forwards 0.3s;
+}
+.animationX_section:nth-child(2){
+  transform: translateX(100px);
+  animation-delay: 0.6s;
+}
+.animationX_section:nth-child(3){
+  animation-delay: 0.9s;
+}
+
+.animationY_section{
+  transform: translateY(100px);
+  opacity: 0;
+  animation: appearSectionAnimation 1s ease-in-out forwards 0.3s;
+}
+
+.animationY_section:nth-child(2){
+  animation-delay: 0.6s;
+}
+
+.animationY_section:nth-child(3){
+  animation-delay: 0.9s;
 }
