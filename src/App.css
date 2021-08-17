@@ -28,6 +28,7 @@ body {
 	/* font 체 찾아보기 */
 	font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 	line-height: 1;
+	padding-top: 70px;
 }
 ol, ul {
 	list-style: none;
