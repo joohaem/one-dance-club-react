@@ -6,9 +6,6 @@ h2 {
   font-size: 24px;
   font-weight: inherit;
 }
-body {
-  padding-top: 70px;
-}
 .header {
   position: fixed;
   top: 0;
@@ -130,11 +127,28 @@ body {
   opacity: 0;
   animation: appearSectionAnimation 1s ease-in-out forwards 0.3s;
 }
-
 .animationY_section:nth-child(2){
   animation-delay: 0.6s;
 }
-
 .animationY_section:nth-child(3){
   animation-delay: 0.9s;
+}
+.animationY_section:nth-child(4){
+  animation-delay: 1.2s;
+}
+.animationY_section:nth-child(5){
+  animation-delay: 1.5s;
+}
+.animationY_section:nth-child(6){
+  animation-delay: 1.8s;
+}
+.animationY_section:nth-child(7){
+  animation-delay: 2.1s;
+}
+.animationY_section:nth-child(8){
+  animation-delay: 2.4s;
+}
+.animationY_section:nth-child(9){
+  /* AboutUs 마지막 장르 */
+  animation-delay: 2.7s;
 }

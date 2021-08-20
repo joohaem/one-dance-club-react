@@ -14,10 +14,10 @@ const HeaderComponent = ({ location : { pathname } }) => (
     <Link to="" className="link_menu"><span clvisually_hiddenass="visually_hidden">메뉴 로고</span></Link> */}
     <ul className="menu_items">
       <li className="menu_item"><SLink current={pathname==="/"} to="/">Home</SLink></li>
-      <li className="menu_item"><SLink current={pathname==="/aboutus"} to="./aboutus">About Us</SLink></li>
-      <li className="menu_item"><SLink current={pathname==="/portfolio"} to="./portfolio">Portfolio</SLink></li>
-      <li className="menu_item"><SLink current={pathname==="/qna"} to="./qna">Q & A</SLink></li>
-      <li className="menu_item"><SLink current={pathname==="/contact"} to="./contact">Contact</SLink></li>
+      <li className="menu_item"><SLink current={pathname.includes("/aboutus")} to="/aboutus/bboy">About Us</SLink></li>
+      <li className="menu_item"><SLink current={pathname==="/portfolio"} to="/portfolio">Portfolio</SLink></li>
+      <li className="menu_item"><SLink current={pathname==="/qna"} to="/qna">Q & A</SLink></li>
+      <li className="menu_item"><SLink current={pathname==="/contact"} to="/contact">Contact</SLink></li>
     </ul>
     <div className="menu_links">
       <a href="https://www.instagram.com/odc_streetdance/" target="_blank" className="menu_link link_ist"><span className="visually_hidden">인스타그램</span></a>

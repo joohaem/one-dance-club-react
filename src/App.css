@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+	font-family: 'NEXON Lv1 Gothic OTF';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	/* font 체 찾아보기 */
-	font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+	font-family: 'NEXON Lv1 Gothic OTF', '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
 	line-height: 1;
 	padding-top: 70px;
 }

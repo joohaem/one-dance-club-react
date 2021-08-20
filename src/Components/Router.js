@@ -16,7 +16,7 @@ export default () => (
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/aboutus" exact component={AboutUs} />
+        <Route path="/aboutus" component={AboutUs} />
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/qna" exact component={QnA} />
         <Route path="/contact" exact component={Contact} />

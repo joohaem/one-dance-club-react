@@ -1,7 +1,6 @@
 import React from "react";
 import arrowDown from "../images/qna/icon_arrow_down.gif";
 import arrowUp from "../images/qna/icon_arrow_up.gif";
-import "../Components/Common.css";
 import "./QnA.css";
 
 export default () => {
@@ -24,7 +23,7 @@ export default () => {
     <section className="qna">
         <div className="question" onClick={toggling}>
           <div className="icon icon_q"></div>
-          <div className="content">저는 완전 몸치에요 ,, / 춤 한 번도 안 춰봤어요ㅠㅠ / 오디션 보나요 ?</div>
+          <div className="content">저는 완전 몸치에요.. / 춤 한 번도 안 춰봤어요.. / 오디션 보나요?</div>
           <div className="icon show_more"></div>
         </div>
         <div className="answer">
@@ -41,7 +40,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">일주일 2회(화, 금) 정기연습은 필참인가요 ?</div>
+        <div className="content">일주일 2회(화, 금) 정기연습은 필참인가요?</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -56,7 +55,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">COVID-19으로 N인 이상 집합금지인데 연습하나요 ?</div>
+        <div className="content">COVID-19으로 N인 이상 집합금지인데 연습하나요?</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -70,7 +69,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">COVID-19인데 활동을 하나요 ?</div>
+        <div className="content">COVID-19인데 활동을 하나요?</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -87,7 +86,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">지원을 했는데 연락이 안 와요ㅠㅠ</div>
+        <div className="content">지원을 했는데 연락이 안 와요..</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -101,7 +100,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">지망 장르 나중에 변경 가능한가요 ? / 장르가 고민이에요 ,,</div>
+        <div className="content">지망 장르 나중에 변경 가능한가요? / 장르가 고민이에요..</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -116,7 +115,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">2학기에 추가모집을 하나요 ?</div>
+        <div className="content">2학기에 추가모집을 하나요?</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -128,7 +127,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">회비는 얼마인가요 ?</div>
+        <div className="content">회비는 얼마인가요?</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">
@@ -140,7 +139,7 @@ export default () => {
     <section className="qna">
       <div className="question" onClick={toggling}>
         <div className="icon icon_q"></div>
-        <div className="content">아무래도 내향적인 성격때문에 지원하기가 조금 두려워요 ,,</div>
+        <div className="content">아무래도 내향적인 성격때문에 지원하기가 무서워요..</div>
         <div className="icon show_more"></div>
       </div>
       <div className="answer">

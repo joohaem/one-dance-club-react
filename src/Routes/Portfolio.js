@@ -2,7 +2,6 @@ import React from "react";
 import imgInclub from "../images/portfolio/img-inclub1.jpg";
 import imgIncollege from "../images/portfolio/img-incollege1.jpg";
 import imgOutcollege from "../images/portfolio/img-outcollege1.jpg";
-import "../Components/Common.css";
 import "./Portfolio.css";
 
 export default () => (
