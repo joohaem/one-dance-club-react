@@ -103,7 +103,7 @@ export default () => (
         <ol>
           <li>7.28 FLOWMAKER 대무전 참가</li>
           <li>7.31 O.D.C 청출어람 프로젝트 영상 촬영</li>
-          <li>11.27 O.D.C 18번째 정기공연</li>
+          <li>11.27 O.D.C 19번째 정기공연</li>
         </ol>
         ...
       </section>

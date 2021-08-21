@@ -12,18 +12,19 @@ const Image = styled("img")`
   height: 350px;
   margin: 70px auto;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
 `;
 
 const Explain = styled("div")`
   width: 70%;
   text-align: right;
   margin-left: auto;
-  line-height:200%
+  line-height: 200%;
 `;
 
 const H3 = styled("h3")`
   margin: 30px 0;
-  word-break: break-word;
+  word-break: keep-all;
 `;
 
 const YoutubeLink = styled("a")`
@@ -37,7 +38,7 @@ const YoutubeLink = styled("a")`
 export default () => {
 
   return (
-    <Article>
+    <Article className="animationY_section">
       <Image src={ Picture } alt="사진" />
       <Explain>
         <h1>하우스</h1>

@@ -11,14 +11,30 @@
   height: 100%;
   object-fit: cover;
 }
-.about_activity .activity_btn1 {
+.about_activity .activity_btn {
   position: absolute;
   bottom: 10%;
+  border: none;
+  color: #ff1744;
+  background-color: inherit;
+  font-size: 30px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about_activity .activity_btn:hover {
+  color: white;
+  border-radius: 50%;
+  background-color: #ff1744;
+  cursor: pointer;
+}
+.about_activity .activity_btn1 {
   left: 40%;
 }
 .about_activity .activity_btn2 {
-  position: absolute;
-  bottom: 10%;
   left: 60%;
 }
 .about_activity .content_box {
@@ -46,16 +62,4 @@
 .career ol li {
   font-size: 18px;
   margin: 10px 0;
-}
-
-.activity_btn {
-  background-color: inherit;
-  border-radius: 50%;
-  border: 2px #fff solid;
-  color: #fff;
-  font-size: 14px;
-}
-.activity_btn:hover {
-  font-weight: bold;
-  border: 3px #fff solid;
 }

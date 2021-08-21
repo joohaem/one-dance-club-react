@@ -85,7 +85,8 @@ h2 {
 .footer .ist_link:hover {
   background-color: #ddd;
 }
-.footer .footer_logo{
+.footer .footer_logo {
+  display: inline-block;
   width: 14px;
   vertical-align: top;
   margin: 0 5px;

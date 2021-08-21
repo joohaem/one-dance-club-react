@@ -9,11 +9,11 @@ import "./Home.css";
 export default () => {
 
   return (
-    <main class="main" id="index">
-      <section class="odc_description animationY_section">
-        <h1 class="visually_hidden">O.D.C</h1>
-        <img class="odc_description_img" src={ imgLogo } alt="오디씨 로고" />
-        <p class="odc_description_text">
+    <main className="main" id="index">
+      <section className="odc_description animationY_section">
+        <h1 className="visually_hidden">O.D.C</h1>
+        <img className="odc_description_img" src={ imgLogo } alt="오디씨 로고" />
+        <p className="odc_description_text">
           Street Dance (B-boy, Choreography, Girl's Hiphop, Hiphop, House, Krump, Locking, Poppin, Waacking) 를 중심으로 하며
           연습 및 이론학습으로 올바른 Street Dance 문화를 배우고 전파하는 데 목적을 둔다.
           동국대학교 내부 축제 공연 및 행사 공연, 외부 대학교 축제 및
@@ -24,33 +24,33 @@ export default () => {
     
       </section>
 
-      <section class="what_wedo animationY_section">
-        <h1 class="visually_hidden">what we do?</h1>
+      <section className="what_wedo animationY_section">
+        <h1 className="visually_hidden">what we do?</h1>
 
-        <article class="what_wedo_imgs">
-          <img class="what_wedo_img" src={ imgPractice } />
-          <p class="what_wedo_content">매주 정기연습</p>
+        <article className="what_wedo_imgs">
+          <img className="what_wedo_img" src={ imgPractice } />
+          <p className="what_wedo_content">매주 정기연습</p>
         </article>
       
-        <article class="what_wedo_imgs">
-          <img class="what_wedo_img" src={ imgInCollege } />
-          <p class="what_wedo_content">다양한 교내 축제활동</p>
+        <article className="what_wedo_imgs">
+          <img className="what_wedo_img" src={ imgInCollege } />
+          <p className="what_wedo_content">다양한 교내 축제활동</p>
         </article>
 
-        <article class="what_wedo_imgs">
-          <img class="what_wedo_img" src={ imgMT } />
-          <p class="what_wedo_content">동아리 내 친목활동</p>
+        <article className="what_wedo_imgs">
+          <img className="what_wedo_img" src={ imgMT } />
+          <p className="what_wedo_content">동아리 내 친목활동</p>
         </article>
 
-        <article class="what_wedo_imgs">
-          <img class="what_wedo_img" src={ imgOutCollege } />
-          <p class="what_wedo_content">교외 외부활동</p>
+        <article className="what_wedo_imgs">
+          <img className="what_wedo_img" src={ imgOutCollege } />
+          <p className="what_wedo_content">교외 외부활동</p>
         </article>
       </section>
 
-      <section class="odc_video animationY_section">
-        <h1 class="visually_hidden">odc 홍보 영상</h1>        
-        <iframe class="odc_video_iframe" src="https://www.youtube.com/embed/uwhTCpgw4yg" title="오디씨 유투브 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+      <section className="odc_video animationY_section">
+        <h1 className="visually_hidden">odc 홍보 영상</h1>        
+        <iframe className="odc_video_iframe" src="https://www.youtube.com/embed/uwhTCpgw4yg" title="오디씨 유투브 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
       </section>
     </main>
   );
