@@ -22,8 +22,6 @@
 
 **해야 할 것**
 
-0. 사진 변경 버튼 JS
+0. 사진 변경 버튼 JS / toggle JS
 
-1. styled-component로 옮기기
-
-2. Helmet
+1. Helmet
