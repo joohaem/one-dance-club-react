@@ -6,7 +6,7 @@ import ImgIst from "../images/instagram_logo.png";
 import ImgFb from "../images/facebook_logo.png";
 import ImgYt from "../images/youtube_logo.png";
 
-const Header = styled("header")`
+const Header = styled.header`
   position: fixed;
   top: 0;
   background-color: white;
@@ -31,11 +31,11 @@ const LLink = styled(Link)`
   background-repeat: no-repeat;
 `;
 
-const MenuList = styled("ul")`
+const MenuList = styled.ul`
   display: flex;
 `;
 
-const MenuItem = styled("li")`
+const MenuItem = styled.li`
   padding: 0 20px;
   transition: all 0.3s;
   &:hover {
@@ -50,11 +50,11 @@ const MLink = styled(Link)`
   transition: border-bottom 0.5s ease-in-out;
 `;
 
-const LinkList = styled("div")`
+const LinkList = styled.div`
   display: flex;
 `;
 
-const LinkIst = styled("a")`
+const LinkIst = styled.a`
   display: block;
   width: 26px;
   height: 26px;
@@ -65,7 +65,7 @@ const LinkIst = styled("a")`
   border-radius: 5px;
 `;
 
-const LinkFb = styled("a")`
+const LinkFb = styled.a`
   display: block;
   width: 26px;
   height: 26px;
@@ -75,7 +75,7 @@ const LinkFb = styled("a")`
   background-image: url(${ImgFb});
 `;
 
-const LinkYt = styled("a")`
+const LinkYt = styled.a`
   display: block;
   width: 26px;
   height: 26px;

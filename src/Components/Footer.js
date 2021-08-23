@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import imgIns from "../images/instagram_logo.png";
 
-const Footer = styled("footer")`
+const Footer = styled.footer`
   background-color: #eee;
   height: 14px;
   font-size: 14px;
@@ -10,7 +10,7 @@ const Footer = styled("footer")`
   padding: 25px 0;
 `;
 
-const ILink = styled("a")`
+const ILink = styled.a`
   display: inline-block;
   transition: all 1s;
   &:hover {
@@ -18,7 +18,7 @@ const ILink = styled("a")`
   }
 `;
 
-const IImage = styled("img")`
+const IImage = styled.img`
   display: inline-block;
   width: 14px;
   vertical-align: top;

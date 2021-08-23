@@ -11,17 +11,17 @@ import LockingComponent from "../Components/AboutUs/Locking";
 import PoppinComponent from "../Components/AboutUs/Poppin";
 import WaackingComponent from "../Components/AboutUs/Waacking";
 
-const Section = styled("section")`
+const Section = styled.section`
   width: 1000px;
 `;
 
-const List = styled("ul")`
+const List = styled.ul`
   display: flex;
   justify-content: space-evenly;
   color: black;
 `;
 
-const Item = styled("li")`
+const Item = styled.li`
   border: none;
   border-radius: 5px;
   padding: 2px 5px;

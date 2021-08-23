@@ -3,30 +3,33 @@ import styled from "styled-components";
 import imgInclub1 from "../images/portfolio/img-inclub1.jpg";
 import imgInclub2 from "../images/portfolio/img-inclub2.jpg";
 import imgInclub3 from "../images/portfolio/img-inclub3.jpg";
-import imgIncollege from "../images/portfolio/img-incollege1.jpg";
-import imgOutcollege from "../images/portfolio/img-outcollege1.jpg";
+import imgIncollege1 from "../images/portfolio/img-incollege1.jpg";
+import imgIncollege2 from "../images/portfolio/img-incollege2.jpg";
+import imgIncollege3 from "../images/portfolio/img-incollege3.jpg";
+import imgOutcollege1 from "../images/portfolio/img-outcollege1.jpg";
 
-const ActivityWrapper = styled("section")`
+
+const ActivityWrapper = styled.section`
   padding-bottom: 100px;
-`;
-
-const Activity = styled("article")`
-  display: grid;
+  `;
+  
+const Activity = styled.article`
+display: grid;
   grid-template-columns: 500px 1fr;
-`;
-
-const ImgBox = styled("figure")`
-  position: relative;
+  `;
+  
+const ImgBox = styled.figure`
+position: relative;
   height: 40vh;
-`;
+  `;
 
-const Img = styled("img")`
+  const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-const PrevBtn = styled("button")`
+const PrevBtn = styled.button`
   position: absolute;
   bottom: 10%;
   left: 40%;
@@ -47,9 +50,9 @@ const PrevBtn = styled("button")`
     background-color: #ff1744;
     cursor: pointer;
   }
-`;
-
-const NextBtn = styled("button")`
+  `;
+  
+  const NextBtn = styled.button`
   position: absolute;
   bottom: 10%;
   left: 60%;
@@ -70,45 +73,100 @@ const NextBtn = styled("button")`
     background-color: #ff1744;
     cursor: pointer;
   }
-`;
-
-const ContentBox = styled("div")`
+  `;
+  
+  const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10%;
-`;
-
-const Title = styled("h1")`
+  `;
+  
+  const Title = styled.h1`
   margin: 30px 0;
-`;
-
-const CareerWrapper = styled("section")`
+  `;
+  
+  const CareerWrapper = styled.section`
   display: flex;
   flex-direction: column;
   text-align: center;
-`;
-
-const Title2 = styled("h2")`
+  `;
+  
+  const Title2 = styled.h2`
   margin: 30px 0;
 `;
 
-const CareerItem = styled("li")`
-  font-size: 18px;
-  margin: 10px 0;
+const CareerItem = styled.li`
+font-size: 18px;
+margin: 10px 0;
 `;
 
 export default () => {
+  const inclubImgs = {
+    1: imgInclub1,
+    2: imgInclub2,
+    3: imgInclub3
+  }
+  const incollegeImgs = {
+    1: imgIncollege1,
+    2: imgIncollege2,
+    3: imgIncollege3
+  }
+  const outcollegeImgs = {
+    1: imgOutcollege1
+  }
+  let inclubImgNum = 1;
+  let incollegeImgNum = 1;
+  let outcollegeImgNum = 1;
+  
+  const prevImg = (num, type, e) => {
+    if(num > 1) {
+      const ImgElement = e.target.parentElement.firstElementChild;
+      if(type === 1) {
+        inclubImgNum -= 1;
+        ImgElement.src = inclubImgs[inclubImgNum];
+      } else if(type === 2) {
+        incollegeImgNum -= 1;
+        ImgElement.src = incollegeImgs[incollegeImgNum];
+      } else if(type === 3) {
+        outcollegeImgNum -= 1;
+        ImgElement.src = outcollegeImgs[outcollegeImgNum];
+      }
+    }
+  };
+  
+  const nextImg = (num, type, e) => {
+    const ImgElement = e.target.parentElement.firstElementChild;
+    if(type === 1) {
+      if(num < Object.keys(inclubImgs).length) {
+        inclubImgNum += 1;
+        ImgElement.src = inclubImgs[inclubImgNum];
+      }
+    } else if(type === 2) {
+      if(num < Object.keys(incollegeImgs).length) {
+        incollegeImgNum += 1;
+        ImgElement.src = incollegeImgs[incollegeImgNum];
+      }
+    } else if(type === 3) {
+      if(num < Object.keys(outcollegeImgs).length) {
+        outcollegeImgNum += 1;
+        ImgElement.src = outcollegeImgs[outcollegeImgNum];
+      }
+    }
+    
+  };
+  
+  // const loadImage = () => {};
 
   return (
-  <main className="main">
+    <main className="main">
       <ActivityWrapper>
         <Activity className="animationX_section">
           <ImgBox>
-            <Img className="img-inclub" src={ imgInclub1 }/>
-            <PrevBtn onclick="prevImg('img-inclub')">«</PrevBtn>
-            <NextBtn onclick="nextImg('img-inclub')">»</NextBtn>
+            <Img src={ imgInclub1 }/>
+            <PrevBtn onClick={ (e) => prevImg(inclubImgNum, 1, e) }>«</PrevBtn>
+            <NextBtn onClick={ (e) => nextImg(inclubImgNum, 1, e) }>»</NextBtn>
           </ImgBox>
           <ContentBox>
             <Title>동아리 내 활동</Title>
@@ -122,17 +180,17 @@ export default () => {
             <p>교내 학생들을 대상으로 하는 공연들에 참여합니다.</p>
           </ContentBox>
           <ImgBox>
-            <Img className="img-incollege" src={ imgIncollege } />
-            <PrevBtn onclick="prevImg('img-inclub')">«</PrevBtn>
-            <NextBtn onclick="nextImg('img-inclub')">»</NextBtn>
+            <Img src={ imgIncollege1 } />
+            <PrevBtn onClick={ (e) => prevImg(incollegeImgNum, 2, e) }>«</PrevBtn>
+            <NextBtn onClick={ (e) => nextImg(incollegeImgNum, 2, e) }>»</NextBtn>
           </ImgBox>
         </Activity>
 
         <Activity className="animationX_section">
           <ImgBox>
-            <Img className="img-outcollege" src={ imgOutcollege } />
-            <PrevBtn onclick="prevImg('img-inclub')">«</PrevBtn>
-            <NextBtn onclick="nextImg('img-inclub')">»</NextBtn>
+            <Img src={ imgOutcollege1 } />
+            <PrevBtn onClick={ (e) => prevImg(outcollegeImgNum, 3, e) }>«</PrevBtn>
+            <NextBtn onClick={ (e) => nextImg(outcollegeImgNum, 3, e) }>»</NextBtn>
           </ImgBox>
           <ContentBox>
             <Title>교외 활동</Title>

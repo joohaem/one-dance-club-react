@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Picture from "../../images/aboutus/house.jpg";
 
-const Article = styled("article")`
+const Article = styled.article`
   margin: 100px;
 `;
 
-const Image = styled("img")`
+const Image = styled.img`
   display: block;
   width: 600px;
   height: 350px;
@@ -15,19 +15,19 @@ const Image = styled("img")`
   object-fit: cover;
 `;
 
-const Explain = styled("div")`
+const Explain = styled.div`
   width: 70%;
   text-align: right;
   margin-left: auto;
   line-height: 200%;
 `;
 
-const H3 = styled("h3")`
+const H3 = styled.h3`
   margin: 30px 0;
   word-break: keep-all;
 `;
 
-const YoutubeLink = styled("a")`
+const YoutubeLink = styled.a`
   transition: all 0.3s ease-in-out;
   font-weight: 600;
   &:hover {

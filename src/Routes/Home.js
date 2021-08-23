@@ -6,7 +6,7 @@ import imgInCollege from "../images/home/inCollege.jpg";
 import imgOutCollege from "../images/home/outCollege.jpg";
 import imgPractice from "../images/home/practice.jpg";
 
-const DesciptionWrapper = styled("section")`
+const DesciptionWrapper = styled.section`
   width: 100%;
   padding-bottom: 100px;
   display: flex;
@@ -15,19 +15,19 @@ const DesciptionWrapper = styled("section")`
   align-items: center;
 `;
 
-const DescriptionImg = styled("img")`
+const DescriptionImg = styled.img`
   width: 250px;
   height: auto;
 `;
 
-const DescriptionText = styled("p")`
+const DescriptionText = styled.p`
   width: 400px;
   text-align: right;
   line-height: 200%;
   word-break: keep-all;
 `;
 
-const WedoWrapper = styled("section")`
+const WedoWrapper = styled.section`
   width: 100%;
   padding-bottom: 100px;
   display: grid;
@@ -35,18 +35,18 @@ const WedoWrapper = styled("section")`
   gap: 30px;
 `;
 
-const WedoImg = styled("img")`
+const WedoImg = styled.img`
   width: 100%;
   height: auto;
   display: block;
 `;
 
-const WedoText = styled("figcaption")`
+const WedoText = styled.figcaption`
   margin-top: 20px;
   font-size: 18px;
 `;
 
-const Video = styled("iframe")`
+const Video = styled.iframe`
   display: block;
   margin: 0 auto;
   width: 854px;

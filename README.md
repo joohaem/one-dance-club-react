@@ -10,6 +10,8 @@
 
     (--> 후에 `styled-components`, `withRouter` 사용하여 메뉴 언더바)
 
+    [`styled-components` 기본 개념서](https://styled-components.com/docs/basics)
+
 3. (JSX) `img` 태그 닫아주고, `src={ importedImg }`
 
 4. React를 사용할 때 DOM 엘리먼트가 생성된 후 리스너를 추가하기 위해 **addEventListener를 호출할 필요가 없다.** 
@@ -20,8 +22,23 @@
 
     `/aboutus`와 `/aboutus/house`를 함께 렌더링하기 위해서는 Router exact를 해제해주어야 한다.
 
+6. [onClick 이벤트 처리](https://ko.reactjs.org/docs/handling-events.html)
+
+    ```javascript
+    const prevImg = (num, type, e) => {
+    if(num > 1) {
+        const ImgElement = e.target.parentElement.firstElementChild;
+        if(type === 1) {
+            inclubImgNum -= 1;
+            ImgElement.src = inclubImgs[inclubImgNum];
+        }
+    };
+
+    <PrevBtn onClick={ (e) => prevImg(inclubImgNum, 1, e) }>«</PrevBtn>
+    ```
+
 **해야 할 것**
 
-0. 사진 변경 버튼 JS / toggle JS
-
 1. Helmet
+
+2. 반응형

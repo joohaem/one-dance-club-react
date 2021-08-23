@@ -1,36 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 import imgWay1 from "../images/contact/img-way1.jpg";
+import imgWay2 from "../images/contact/img-way2.jpg";
 import imgJoin from "../images/contact/join_step.jpg";
 import imgPresident from "../images/contact/president.jpg";
 import imgVicePresident from "../images/contact/vice_president.jpg";
 import imgTreasurer from "../images/contact/treasurer.jpg";
 import imgIns from "../images/instagram_logo.png";
 
-const WayWrapper = styled("section")`
+const WayWrapper = styled.section`
   margin: 100px 0;
 `;
 
-const Title = styled("h1")`
+const Title = styled.h1`
   margin-bottom: 50px;
 `;
 
-const WayBox = styled("article")`
+const WayBox = styled.article`
   display: flex;
   justify-content: space-evenly;
 `;
 
-const WayImgBox = styled("div")`
+const WayImgBox = styled.div`
   position: relative;
 `;
 
-const WayImg = styled("Img")`
+const WayImg = styled.img`
   /* 3:4 */
   width: 480px;
   height: 560px;
 `;
 
-const PrevBtn = styled("button")`
+const PrevBtn = styled.button`
   position: absolute;
   bottom: 10%;
   left: 40%;
@@ -53,7 +54,7 @@ const PrevBtn = styled("button")`
   }
 `;
 
-const NextBtn = styled("button")`
+const NextBtn = styled.button`
   position: absolute;
   bottom: 10%;
   left: 60%;
@@ -76,48 +77,48 @@ const NextBtn = styled("button")`
   }
 `;
 
-const WayText = styled("p")`
+const WayText = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 300%;
 `;
 
-const JoinWrapper = styled("section")`
+const JoinWrapper = styled.section`
   margin: 100px 0;
 `;
 
-const JoinImg = styled("img")`
+const JoinImg = styled.img`
   display: block;
   width: 800px;
   height: auto;
   margin: 0 auto;
 `;
 
-const ExecutivesWrapper = styled("section")`
+const ExecutivesWrapper = styled.section`
   margin: 100px 0;
 `;
 
-const ExecutivesBox = styled("div")`
+const ExecutivesBox = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
 
-const ExecutiveImg = styled("img")`
+const ExecutiveImg = styled.img`
   width: 200px;
   height: auto;
   border-radius: 50%;
 `;
 
-const ExecutiveName = styled("p")`
+const ExecutiveName = styled.p`
   margin: 20px 0 10px;
 `;
 
-const ExecutiveNum = styled("p")`
+const ExecutiveNum = styled.p`
   margin-bottom: 10px;
 `;
 
-const ILink = styled("a")`
+const ILink = styled.a`
   display: inline-block;
   transition: all 0.3s;
   &:hover {
@@ -125,22 +126,47 @@ const ILink = styled("a")`
   }
 `;
 
-const ImgIst = styled("img")`
+const ImgIst = styled.img`
   width: 14px;
   vertical-align: top;
   margin-right: 5px;
 `;
 
 
-export default () => (
+export default () => {
+  const wayImgs = {
+    1: imgWay1,
+    2: imgWay2
+  }
+  let imgNum = 1;
+  
+  const prevImg = (num, e) => {
+    if(num > 1) {
+      const ImgElement = e.target.parentElement.firstElementChild;
+      imgNum -= 1;
+      ImgElement.src = wayImgs[imgNum];
+    }
+  };
+  
+  const nextImg = (num, e) => {
+    if(num < Object.keys(wayImgs).length) {
+      const ImgElement = e.target.parentElement.firstElementChild;
+      imgNum += 1;
+      ImgElement.src = wayImgs[imgNum];
+    }
+  };
+
+  // const loadImage = () => {};
+  
+  return (
   <main className="main">
     <WayWrapper className="animationY_section">
       <Title>동아리방 가는 길</Title>
       <WayBox>
         <WayImgBox>
-          <WayImg className="img-way" src={ imgWay1 } alt="가는 길" />
-          <PrevBtn onclick="prevImg('img-way')">«</PrevBtn>
-          <NextBtn onclick="nextImg('img-way')">»</NextBtn>
+          <WayImg src={ imgWay1 } alt="가는 길" />
+          <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
+          <NextBtn onClick={ (e) => nextImg(imgNum, e) }>»</NextBtn>
         </WayImgBox>
         <WayText>
           1. 충무로역 1번 출구에서 나온 사진/ 쭉 직진<br />
@@ -196,4 +222,4 @@ export default () => (
       </ExecutivesWrapper>
       
     </main>
-);
+)};
