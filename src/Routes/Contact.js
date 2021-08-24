@@ -1,20 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import imgWay1 from "../images/contact/img-way1.jpg";
-import imgWay2 from "../images/contact/img-way2.jpg";
-import imgJoin from "../images/contact/join_step.jpg";
-import imgPresident from "../images/contact/president.jpg";
-import imgVicePresident from "../images/contact/vice_president.jpg";
-import imgTreasurer from "../images/contact/treasurer.jpg";
-import imgIns from "../images/instagram_logo.png";
 
 const WayWrapper = styled.section`
   margin: 100px 0;
 `;
 
 const Title = styled.h1`
-  text-align: center;
   margin-bottom: 50px;
 `;
 
@@ -135,8 +127,8 @@ const ImgIst = styled.img`
 
 export default () => {
   const wayImgs = {
-    1: imgWay1,
-    2: imgWay2
+    1: "image/contact/img-way1.jpg",
+    2: "image/contact/img-way2.jpg"
   }
   let imgNum = 1;
   
@@ -170,7 +162,7 @@ export default () => {
           <Title>동아리방 가는 길</Title>
           <WayBox>
             <WayImgBox>
-              <WayImg src={ imgWay1 } alt="가는 길" />
+              <WayImg src="image/contact/img-way1.jpg" alt="가는 길" />
               <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(imgNum, e) }>»</NextBtn>
             </WayImgBox>
@@ -189,7 +181,7 @@ export default () => {
           <JoinWrapper className="animationY_section">
             <Title>가입 절차</Title>
             <article>
-              <JoinImg src={ imgJoin } alt="가입절차 이미지" />
+              <JoinImg src="image/contact/join_step.jpg" alt="가입절차 이미지" />
             </article>
           </JoinWrapper>
           
@@ -198,29 +190,29 @@ export default () => {
             <Title>임원진</Title>
             <ExecutivesBox>
               <article>
-                <ExecutiveImg src={ imgPresident } alt="회장" />
+                <ExecutiveImg src="image/contact/president.jpg" alt="회장" />
                 <ExecutiveName>회장 최화인</ExecutiveName>
                 <ExecutiveNum>010-7611-9475</ExecutiveNum>
                 <ILink href="https://instagram.com/im_fine_tk/" target="_blank">
-                  <ImgIst src={ imgIns } className="executives_ist" alt="회장인스타" />
+                  <ImgIst src="image/instagram_logo.png" className="executives_ist" alt="회장인스타" />
                   im_fine_tk
                 </ILink>
               </article>
               <article>
-                <ExecutiveImg src={ imgVicePresident } alt="부회장" />
+                <ExecutiveImg src="image/contact/vice_president.jpg" alt="부회장" />
                 <ExecutiveName>부회장 김민규</ExecutiveName>
                 <ExecutiveNum>010-9330-1689</ExecutiveNum>
                 <ILink href="https://instagram.com/00__ggyu/" target="_blank">
-                  <ImgIst src={ imgIns } className="executives_ist" alt="부회장인스타" />
+                  <ImgIst src="image/instagram_logo.png" className="executives_ist" alt="부회장인스타" />
                   00_ggyu
                 </ILink>
               </article>
               <article>
-                <ExecutiveImg src={ imgTreasurer } alt="총무" />
+                <ExecutiveImg src="image/contact/treasurer.jpg" alt="총무" />
                 <ExecutiveName>총무 김현이</ExecutiveName>
                 <ExecutiveNum>010-9699-2416</ExecutiveNum>
                 <ILink href="https://instagram.com/illumin2us/" target="_blank">
-                  <ImgIst src={ imgIns } className="executives_ist" alt="총무인스타" />
+                  <ImgIst src="image/instagram_logo.png" className="executives_ist" alt="총무인스타" />
                   illumin2us
                 </ILink>
               </article>

@@ -1,17 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import arrowDown from "../images/qna/icon_arrow_down.gif";
-import arrowUp from "../images/qna/icon_arrow_up.gif";
-import imgQuestion from "../images/qna/icon_question.png";
-import imgTitle from "../images/qna/title_faq.gif";
-import imgLogo from "../images/odc_logo.png";
 
 const Title = styled.h1`
   margin: 70px auto;
   width: 98px;
   height: 50px;
-  background-image: url(${imgTitle});
+  background-image: url("image/qna/title_faq.gif");
 `;
 
 const QnA = styled.article`
@@ -52,7 +47,7 @@ const IconQ = styled.div`
   background-size: 30px;
   background-position: 15px 30px;
   left: 0;
-  background-image: url(${imgQuestion});
+  background-image: url("image/qna/icon_question.png");
 `;
 
 const IconA = styled.div`
@@ -65,7 +60,7 @@ const IconA = styled.div`
   background-size: 30px;
   background-position: 15px 30px;
   left: 0;
-  background-image: url(${imgLogo});
+  background-image: url("image/odc_logo.png");
 `;
 
 const IconArrow = styled.div`
@@ -76,7 +71,7 @@ const IconArrow = styled.div`
   width: 60px;
   background-repeat: no-repeat;
   right: 0;
-  background-image: url(${arrowDown});
+  background-image: url("image/qna/icon_arrow_down.gif");
   background-position: 50% 38px;
   &:hover {
     cursor: pointer;
@@ -90,10 +85,10 @@ export default () => {
     const toggled = clicked.nextElementSibling;
     if(toggled.classList.contains("openAnswer")) {
       toggled.classList.remove("openAnswer");
-      arrowImg.style.backgroundImage = `url(${arrowDown})`;
+      arrowImg.style.backgroundImage = `url("image/qna/icon_arrow_down.gif")`;
     } else {
       toggled.classList.add("openAnswer");
-      arrowImg.style.backgroundImage = `url(${arrowUp})`;
+      arrowImg.style.backgroundImage = `url("image/qna/icon_arrow_up.gif")`;
     }
   }
 

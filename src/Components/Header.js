@@ -1,10 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
-import ImgLogo from "../images/odc_logo.png";
-import ImgIst from "../images/instagram_logo.png";
-import ImgFb from "../images/facebook_logo.png";
-import ImgYt from "../images/youtube_logo.png";
 
 const Header = styled.header`
   position: fixed;
@@ -25,7 +21,7 @@ const LLink = styled(Link)`
   display: block;
   width: 70px;
   height: 70px;
-  background-image: url(${ImgLogo});
+  background-image: url("image/odc_logo.png");
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +57,7 @@ const LinkIst = styled.a`
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(${ImgIst});
+  background-image: url("image/instagram_logo.png");
   border-radius: 5px;
   &:hover {
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -75,7 +71,7 @@ const LinkFb = styled.a`
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(${ImgFb});
+  background-image: url("image/facebook_logo.png");
   &:hover {
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
@@ -88,7 +84,7 @@ const LinkYt = styled.a`
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(${ImgYt});
+  background-image: url("image/youtube_logo.png");
   &:hover {
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   }

@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import imgLogo from "../images/odc_logo.png";
-import imgMT from "../images/home/mt.jpg";
-import imgInCollege from "../images/home/inCollege.jpg";
-import imgOutCollege from "../images/home/outCollege.jpg";
-import imgPractice from "../images/home/practice.jpg";
 
 const DesciptionWrapper = styled.section`
   width: 100%;
@@ -65,7 +60,7 @@ export default () => {
       <main className="main">
         <DesciptionWrapper className="animationY_section">
           <h1 className="visually_hidden">O.D.C</h1>
-          <DescriptionImg src={ imgLogo } alt="오디씨 로고" />
+          <DescriptionImg src="image/odc_logo.png" alt="오디씨 로고" />
           <DescriptionText>
             Street Dance (B-boy, Choreography, Girl's Hiphop, Hiphop, House, Krump, Locking, Poppin, Waacking) 를 중심으로 하며
             연습 및 이론학습으로 올바른 Street Dance 문화를 배우고 전파하는 데 목적을 둔다.
@@ -80,22 +75,22 @@ export default () => {
           <h1 className="visually_hidden">what we do?</h1>
 
           <figure>
-            <WedoImg src={ imgPractice } />
+            <WedoImg src="image/home/practice.jpg" />
             <WedoText>매주 정기연습</WedoText>
           </figure>
         
           <figure>
-            <WedoImg src={ imgInCollege } />
+            <WedoImg src="image/home/inCollege.jpg" />
             <WedoText>다양한 교내 축제활동</WedoText>
           </figure>
 
           <figure>
-            <WedoImg src={ imgMT } />
+            <WedoImg src="image/home/mt.jpg" />
             <WedoText>동아리 내 친목활동</WedoText>
           </figure>
 
           <figure>
-            <WedoImg src={ imgOutCollege } />
+            <WedoImg src="image/home/outCollege.jpg" />
             <WedoText>교외 외부활동</WedoText>
           </figure>
         </WedoWrapper>

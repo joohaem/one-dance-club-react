@@ -71,7 +71,7 @@ export default ({ location: { pathname } }) => {
               <Link to="/aboutus/locking">Locking</Link>
             </Item>
             <Item active={pathname === "/aboutus/poppin"} className="animationY_section">
-              <Link to="/aboutus/poppin">Poppin</Link>
+              <Link to="/aboutus/poppin">Popping</Link>
             </Item>
             <Item active={pathname === "/aboutus/waacking"} className="animationY_section">
               <Link to="/aboutus/waacking">Waacking</Link>

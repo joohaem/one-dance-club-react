@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
-import imgInclub1 from "../images/portfolio/img-inclub1.jpg";
-import imgInclub2 from "../images/portfolio/img-inclub2.jpg";
-import imgInclub3 from "../images/portfolio/img-inclub3.jpg";
-import imgIncollege1 from "../images/portfolio/img-incollege1.jpg";
-import imgIncollege2 from "../images/portfolio/img-incollege2.jpg";
-import imgIncollege3 from "../images/portfolio/img-incollege3.jpg";
-import imgOutcollege1 from "../images/portfolio/img-outcollege1.jpg";
-
 
 const ActivityWrapper = styled.section`
   padding-bottom: 100px;
@@ -103,17 +95,17 @@ margin: 10px 0;
 
 export default () => {
   const inclubImgs = {
-    1: imgInclub1,
-    2: imgInclub2,
-    3: imgInclub3
+    1: "image/portfolio/img-inclub1.jpg",
+    2: "image/portfolio/img-inclub2.jpg",
+    3: "image/portfolio/img-inclub3.jpg"
   }
   const incollegeImgs = {
-    1: imgIncollege1,
-    2: imgIncollege2,
-    3: imgIncollege3
+    1: "image/portfolio/img-incollege1.jpg",
+    2: "image/portfolio/img-incollege2.jpg",
+    3: "image/portfolio/img-incollege3.jpg"
   }
   const outcollegeImgs = {
-    1: imgOutcollege1
+    1: "image/portfolio/img-outcollege1.jpg"
   }
   let inclubImgNum = 1;
   let incollegeImgNum = 1;
@@ -182,7 +174,7 @@ export default () => {
         <ActivityWrapper>
           <Activity className="animationX_section">
             <ImgBox>
-              <Img src={ imgInclub1 }/>
+              <Img src="image/portfolio/img-inclub1.jpg"/>
               <PrevBtn onClick={ (e) => prevImg(inclubImgNum, 1, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(inclubImgNum, 1, e) }>»</NextBtn>
             </ImgBox>
@@ -198,7 +190,7 @@ export default () => {
               <p>교내 학생들을 대상으로 하는 공연들에 참여합니다.</p>
             </ContentBox>
             <ImgBox>
-              <Img src={ imgIncollege1 } />
+              <Img src="image/portfolio/img-incollege1.jpg" />
               <PrevBtn onClick={ (e) => prevImg(incollegeImgNum, 2, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(incollegeImgNum, 2, e) }>»</NextBtn>
             </ImgBox>
@@ -206,7 +198,7 @@ export default () => {
 
           <Activity className="animationX_section">
             <ImgBox>
-              <Img src={ imgOutcollege1 } />
+              <Img src="image/portfolio/img-outcollege1.jpg" />
               <PrevBtn onClick={ (e) => prevImg(outcollegeImgNum, 3, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(outcollegeImgNum, 3, e) }>»</NextBtn>
             </ImgBox>

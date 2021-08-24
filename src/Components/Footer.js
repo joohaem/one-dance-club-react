@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import imgIns from "../images/instagram_logo.png";
 
 const Footer = styled.footer`
   background-color: #eee;
@@ -31,11 +30,11 @@ const IImage = styled.img`
 export default () => (
   <Footer>
     <ILink href="https://instagram.com/joamjoam_2/" target="_blank">
-      <IImage src={imgIns} className="footer_logo" alt="인스타그램" />
+      <IImage src="image/instagram_logo.png" className="footer_logo" alt="인스타그램" />
       joamjoam_2
     </ILink>
     <ILink href="https://www.instagram.com/ps_noback/" target="_blank">
-      <IImage src={imgIns} className="footer_logo" alt="인스타그램" />
+      <IImage src="image/instagram_logo.png" className="footer_logo" alt="인스타그램" />
       ps_noback
     </ILink>  
   </Footer>
