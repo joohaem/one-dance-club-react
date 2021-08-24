@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import imgWay1 from "../images/contact/img-way1.jpg";
 import imgWay2 from "../images/contact/img-way2.jpg";
 import imgJoin from "../images/contact/join_step.jpg";
@@ -160,67 +161,72 @@ export default () => {
   };
   
   return (
-  <main className="main">
-    <WayWrapper className="animationY_section">
-      <Title>동아리방 가는 길</Title>
-      <WayBox>
-        <WayImgBox>
-          <WayImg src={ imgWay1 } alt="가는 길" />
-          <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
-          <NextBtn onClick={ (e) => nextImg(imgNum, e) }>»</NextBtn>
-        </WayImgBox>
-        <WayText>
-          1. 충무로역 1번 출구에서 나온 사진/ 쭉 직진<br />
-          2. 우회전하는곳 사진 (그 두끼있는 건물에서)<br />
-          3. 좌회전하는곳 사진 (빠바있는곳)<br />
-          4. 후문 들어가는 사진/ 후문에서 우회전<br />
-          5. 5층 맨끝 복도 odc 동방 사진<br />
-        </WayText>
-      </WayBox>
-      
-    </WayWrapper>
-      
+    <>
+      <Helmet>
+        <title>Contact | O.D.C</title>
+      </Helmet>
+      <main className="main">
+        <WayWrapper className="animationY_section">
+          <Title>동아리방 가는 길</Title>
+          <WayBox>
+            <WayImgBox>
+              <WayImg src={ imgWay1 } alt="가는 길" />
+              <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
+              <NextBtn onClick={ (e) => nextImg(imgNum, e) }>»</NextBtn>
+            </WayImgBox>
+            <WayText>
+              1. 충무로역 1번 출구에서 나온 사진/ 쭉 직진<br />
+              2. 우회전하는곳 사진 (그 두끼있는 건물에서)<br />
+              3. 좌회전하는곳 사진 (빠바있는곳)<br />
+              4. 후문 들어가는 사진/ 후문에서 우회전<br />
+              5. 5층 맨끝 복도 odc 동방 사진<br />
+            </WayText>
+          </WayBox>
+          
+        </WayWrapper>
+          
 
-      <JoinWrapper className="animationY_section">
-        <Title>가입 절차</Title>
-        <article>
-          <JoinImg src={ imgJoin } alt="가입절차 이미지" />
-        </article>
-      </JoinWrapper>
-      
+          <JoinWrapper className="animationY_section">
+            <Title>가입 절차</Title>
+            <article>
+              <JoinImg src={ imgJoin } alt="가입절차 이미지" />
+            </article>
+          </JoinWrapper>
+          
 
-      <ExecutivesWrapper className="animationY_section">
-        <Title>임원진</Title>
-        <ExecutivesBox>
-          <article>
-            <ExecutiveImg src={ imgPresident } alt="회장" />
-            <ExecutiveName>회장 최화인</ExecutiveName>
-            <ExecutiveNum>010-7611-9475</ExecutiveNum>
-            <ILink href="https://instagram.com/im_fine_tk/" target="_blank">
-              <ImgIst src={ imgIns } className="executives_ist" alt="회장인스타" />
-              im_fine_tk
-            </ILink>
-          </article>
-          <article>
-            <ExecutiveImg src={ imgVicePresident } alt="부회장" />
-            <ExecutiveName>부회장 김민규</ExecutiveName>
-            <ExecutiveNum>010-9330-1689</ExecutiveNum>
-            <ILink href="https://instagram.com/00__ggyu/" target="_blank">
-              <ImgIst src={ imgIns } className="executives_ist" alt="부회장인스타" />
-              00_ggyu
-            </ILink>
-          </article>
-          <article>
-            <ExecutiveImg src={ imgTreasurer } alt="총무" />
-            <ExecutiveName>총무 김현이</ExecutiveName>
-            <ExecutiveNum>010-9699-2416</ExecutiveNum>
-            <ILink href="https://instagram.com/illumin2us/" target="_blank">
-              <ImgIst src={ imgIns } className="executives_ist" alt="총무인스타" />
-              illumin2us
-            </ILink>
-          </article>
-        </ExecutivesBox>
-      </ExecutivesWrapper>
-      
-    </main>
+          <ExecutivesWrapper className="animationY_section">
+            <Title>임원진</Title>
+            <ExecutivesBox>
+              <article>
+                <ExecutiveImg src={ imgPresident } alt="회장" />
+                <ExecutiveName>회장 최화인</ExecutiveName>
+                <ExecutiveNum>010-7611-9475</ExecutiveNum>
+                <ILink href="https://instagram.com/im_fine_tk/" target="_blank">
+                  <ImgIst src={ imgIns } className="executives_ist" alt="회장인스타" />
+                  im_fine_tk
+                </ILink>
+              </article>
+              <article>
+                <ExecutiveImg src={ imgVicePresident } alt="부회장" />
+                <ExecutiveName>부회장 김민규</ExecutiveName>
+                <ExecutiveNum>010-9330-1689</ExecutiveNum>
+                <ILink href="https://instagram.com/00__ggyu/" target="_blank">
+                  <ImgIst src={ imgIns } className="executives_ist" alt="부회장인스타" />
+                  00_ggyu
+                </ILink>
+              </article>
+              <article>
+                <ExecutiveImg src={ imgTreasurer } alt="총무" />
+                <ExecutiveName>총무 김현이</ExecutiveName>
+                <ExecutiveNum>010-9699-2416</ExecutiveNum>
+                <ILink href="https://instagram.com/illumin2us/" target="_blank">
+                  <ImgIst src={ imgIns } className="executives_ist" alt="총무인스타" />
+                  illumin2us
+                </ILink>
+              </article>
+            </ExecutivesBox>
+          </ExecutivesWrapper>
+          
+        </main>
+      </>
 )};

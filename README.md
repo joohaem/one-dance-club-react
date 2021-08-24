@@ -35,11 +35,28 @@
         ImgElement.src = wayImgs[imgNum];
     };
 
-    <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
+    (    
+        <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
+    )
     ```
+
+7. > npm install react-helmet
+
+    ```javascript
+    import Helmet from "react-helmet";
+
+    (
+        <>
+            <Helmet>
+                <title>O.D.C</title>
+            </Helmet>
+            ~
+        </>
+    )
+    ```
+
+
 
 **해야 할 것**
 
-1. Helmet
-
-2. 반응형
+1. 반응형

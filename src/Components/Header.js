@@ -42,7 +42,8 @@ const MenuItem = styled.li`
   const MLink = styled(Link)`
   display: block;
   border-bottom: 3px solid 
-  ${props => (props.current ? "#ff1744" : "transparent")};
+    ${props => (props.current ? "#ff1744" : "transparent")};
+  font-weight: ${props => (props.current ? "600" : "transparent")};
   transition: border-bottom 0.5s ease-in-out;
   &:hover {
     font-weight: 600;
