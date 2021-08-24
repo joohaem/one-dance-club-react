@@ -37,17 +37,16 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   padding: 0 20px;
-  transition: all 0.3s;
+`;
+  
+  const MLink = styled(Link)`
+  display: block;
+  border-bottom: 3px solid 
+  ${props => (props.current ? "#ff1744" : "transparent")};
+  transition: border-bottom 0.5s ease-in-out;
   &:hover {
     font-weight: 600;
   }
-`;
-
-const MLink = styled(Link)`
-  display: block;
-  border-bottom: 3px solid 
-    ${props => (props.current ? "#ff1744" : "transparent")};
-  transition: border-bottom 0.5s ease-in-out;
 `;
 
 const LinkList = styled.div`
@@ -63,6 +62,9 @@ const LinkIst = styled.a`
   background-repeat: no-repeat;
   background-image: url(${ImgIst});
   border-radius: 5px;
+  &:hover {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
 `;
 
 const LinkFb = styled.a`
@@ -73,6 +75,9 @@ const LinkFb = styled.a`
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(${ImgFb});
+  &:hover {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
 `;
 
 const LinkYt = styled.a`
@@ -83,6 +88,9 @@ const LinkYt = styled.a`
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(${ImgYt});
+  &:hover {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
 `;
 
 const HeaderComponent = ({ location : { pathname } }) => (

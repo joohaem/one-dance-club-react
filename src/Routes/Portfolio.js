@@ -31,49 +31,47 @@ position: relative;
 
 const PrevBtn = styled.button`
   position: absolute;
-  bottom: 10%;
-  left: 40%;
+  top: calc(50% - 1.5rem);
+  left: 0%;
   border: none;
+  width: 3rem;
+  height: 3rem;
+  /* Flex rules 'em all */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ff1744;
   opacity: 70%;
   background-color: inherit;
   font-size: 30px;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &:hover {
     color: white;
-    border-radius: 50%;
     background-color: #ff1744;
     cursor: pointer;
   }
-  `;
+`;
   
   const NextBtn = styled.button`
   position: absolute;
-  bottom: 10%;
-  left: 60%;
+  top: calc(50% - 1.5rem);
+  right: 0%;
   border: none;
+  width: 3rem;
+  height: 3rem;
+  /* Flex rules 'em all */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ff1744;
   opacity: 70%;
   background-color: inherit;
   font-size: 30px;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &:hover {
     color: white;
-    border-radius: 50%;
     background-color: #ff1744;
     cursor: pointer;
   }
-  `;
+`;
   
   const ContentBox = styled.div`
   display: flex;
@@ -121,18 +119,28 @@ export default () => {
   let outcollegeImgNum = 1;
   
   const prevImg = (num, type, e) => {
-    if(num > 1) {
-      const ImgElement = e.target.parentElement.firstElementChild;
-      if(type === 1) {
+    const ImgElement = e.target.parentElement.firstElementChild;
+    if(type === 1) {
+      if(num > 1) {
         inclubImgNum -= 1;
-        ImgElement.src = inclubImgs[inclubImgNum];
-      } else if(type === 2) {
-        incollegeImgNum -= 1;
-        ImgElement.src = incollegeImgs[incollegeImgNum];
-      } else if(type === 3) {
-        outcollegeImgNum -= 1;
-        ImgElement.src = outcollegeImgs[outcollegeImgNum];
+      } else {
+        inclubImgNum = Object.keys(inclubImgs).length;
       }
+      ImgElement.src = inclubImgs[inclubImgNum];
+    } else if(type === 2) {
+      if(num > 1) {
+        incollegeImgNum -= 1;
+      } else {
+        incollegeImgNum = Object.keys(incollegeImgs).length;
+      }
+      ImgElement.src = incollegeImgs[incollegeImgNum];
+    } else if(type === 3) {
+      if(num > 1) {
+        outcollegeImgNum -= 1;
+      } else {
+        outcollegeImgNum = Object.keys(outcollegeImgs).length;
+      }
+      ImgElement.src = outcollegeImgs[outcollegeImgNum];
     }
   };
   
@@ -141,20 +149,25 @@ export default () => {
     if(type === 1) {
       if(num < Object.keys(inclubImgs).length) {
         inclubImgNum += 1;
-        ImgElement.src = inclubImgs[inclubImgNum];
+      } else {
+        inclubImgNum = 1;
       }
+      ImgElement.src = inclubImgs[inclubImgNum];
     } else if(type === 2) {
       if(num < Object.keys(incollegeImgs).length) {
         incollegeImgNum += 1;
-        ImgElement.src = incollegeImgs[incollegeImgNum];
+      } else {
+        incollegeImgNum = 1;
       }
+      ImgElement.src = incollegeImgs[incollegeImgNum];
     } else if(type === 3) {
       if(num < Object.keys(outcollegeImgs).length) {
         outcollegeImgNum += 1;
-        ImgElement.src = outcollegeImgs[outcollegeImgNum];
+      } else {
+        outcollegeImgNum = 1;
       }
+      ImgElement.src = outcollegeImgs[outcollegeImgNum];
     }
-    
   };
   
   // const loadImage = () => {};

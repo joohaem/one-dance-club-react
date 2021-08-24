@@ -13,6 +13,7 @@ const WayWrapper = styled.section`
 `;
 
 const Title = styled.h1`
+  text-align: center;
   margin-bottom: 50px;
 `;
 
@@ -33,22 +34,21 @@ const WayImg = styled.img`
 
 const PrevBtn = styled.button`
   position: absolute;
-  bottom: 10%;
-  left: 40%;
+  top: calc(50% - 1.5rem);
+  left: 0%;
   border: none;
+  width: 3rem;
+  height: 3rem;
+  /* Flex rules 'em all */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ff1744;
   opacity: 70%;
   background-color: inherit;
   font-size: 30px;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &:hover {
     color: white;
-    border-radius: 50%;
     background-color: #ff1744;
     cursor: pointer;
   }
@@ -56,24 +56,23 @@ const PrevBtn = styled.button`
 
 const NextBtn = styled.button`
   position: absolute;
-  bottom: 10%;
-  left: 60%;
+  top: calc(50% - 1.5rem);
+  right: 0%;
   border: none;
+  width: 3rem;
+  height: 3rem;
+  /* Flex rules 'em all */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ff1744;
   opacity: 70%;
   background-color: inherit;
   font-size: 30px;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   &:hover {
-    color: white;
-    border-radius: 50%;
-    background-color: #ff1744;
-    cursor: pointer;
+  color: white;
+  background-color: #ff1744;
+  cursor: pointer;
   }
 `;
 
@@ -141,22 +140,24 @@ export default () => {
   let imgNum = 1;
   
   const prevImg = (num, e) => {
+    const ImgElement = e.target.parentElement.firstElementChild;
     if(num > 1) {
-      const ImgElement = e.target.parentElement.firstElementChild;
       imgNum -= 1;
-      ImgElement.src = wayImgs[imgNum];
+    } else {
+      imgNum = Object.keys(wayImgs).length;
     }
+    ImgElement.src = wayImgs[imgNum];
   };
   
   const nextImg = (num, e) => {
+    const ImgElement = e.target.parentElement.firstElementChild;
     if(num < Object.keys(wayImgs).length) {
-      const ImgElement = e.target.parentElement.firstElementChild;
       imgNum += 1;
-      ImgElement.src = wayImgs[imgNum];
+    } else {
+      imgNum = 1;
     }
+    ImgElement.src = wayImgs[imgNum];
   };
-
-  // const loadImage = () => {};
   
   return (
   <main className="main">

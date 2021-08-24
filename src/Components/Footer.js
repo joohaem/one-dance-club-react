@@ -7,7 +7,7 @@ const Footer = styled.footer`
   height: 14px;
   font-size: 14px;
   text-align: center;
-  padding: 25px 0;
+  padding: 30px 0;
 `;
 
 const ILink = styled.a`

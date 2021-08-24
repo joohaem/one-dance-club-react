@@ -25,16 +25,17 @@
 6. [onClick 이벤트 처리](https://ko.reactjs.org/docs/handling-events.html)
 
     ```javascript
-    const prevImg = (num, type, e) => {
-    if(num > 1) {
+    const prevImg = (num, e) => {
         const ImgElement = e.target.parentElement.firstElementChild;
-        if(type === 1) {
-            inclubImgNum -= 1;
-            ImgElement.src = inclubImgs[inclubImgNum];
+        if(num > 1) {
+            imgNum -= 1;
+        } else {
+            imgNum = Object.keys(wayImgs).length;
         }
+        ImgElement.src = wayImgs[imgNum];
     };
 
-    <PrevBtn onClick={ (e) => prevImg(inclubImgNum, 1, e) }>«</PrevBtn>
+    <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
     ```
 
 **해야 할 것**

@@ -43,7 +43,7 @@ export default () => {
       <Explain>
         <h1>하우스</h1>
         <H3>하우스 음악에 맞춰 추는 클럽용 댄스가 시초이며, 빠른 스텝과 그루브에서 나오는 풍부한 박자감, 음악의 특성상 빠른 진행을 보이는 템포, 변화무쌍하게 음악의 리듬을 풋워크으로 표현하는 춤입니다.</H3> 
-        <YoutubeLink href="https://youtu.be/SubUAMdHuqA" target="_blank">장르 관련 영상 보기</YoutubeLink>
+        <YoutubeLink href="https://youtu.be/fHr9b9EqI3M" target="_blank">장르 관련 영상 보기</YoutubeLink>
       </Explain>
     </Article>
   );
