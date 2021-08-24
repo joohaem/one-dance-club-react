@@ -4,6 +4,7 @@ import imgIns from "../images/instagram_logo.png";
 
 const Footer = styled.footer`
   background-color: #eee;
+  width: 100%;
   height: 14px;
   font-size: 14px;
   text-align: center;

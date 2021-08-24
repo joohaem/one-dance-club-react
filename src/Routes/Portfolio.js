@@ -12,17 +12,17 @@ import imgOutcollege1 from "../images/portfolio/img-outcollege1.jpg";
 
 const ActivityWrapper = styled.section`
   padding-bottom: 100px;
-  `;
+`;
   
 const Activity = styled.article`
 display: grid;
   grid-template-columns: 500px 1fr;
-  `;
+`;
   
 const ImgBox = styled.figure`
 position: relative;
   height: 40vh;
-  `;
+`;
 
   const Img = styled.img`
   width: 100%;
@@ -80,17 +80,17 @@ const PrevBtn = styled.button`
   justify-content: center;
   align-items: center;
   padding: 10%;
-  `;
+`;
   
   const Title = styled.h1`
   margin: 30px 0;
-  `;
+`;
   
   const CareerWrapper = styled.section`
   display: flex;
   flex-direction: column;
   text-align: center;
-  `;
+`;
   
   const Title2 = styled.h2`
   margin: 30px 0;

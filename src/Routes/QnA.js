@@ -15,8 +15,6 @@ const Title = styled.h1`
 `;
 
 const QnA = styled.article`
-  max-width: 1000px;
-  margin: 0 auto;
   border-top: 1px #a1a5ad solid;
   &:last-child {
     border-bottom: 1px #a1a5ad solid;

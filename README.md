@@ -1,5 +1,7 @@
 # ODC
 
+https://friendly-snyder-4bece3.netlify.app/#/
+
 **React로의 변환**
 
 0. > npm install react-router-dom
@@ -55,8 +57,10 @@
     )
     ```
 
+8. Netlify 배포
 
+    - Site setting 메뉴 -> Build & Deploy -> Edit Setting -> Build Command에서 `CI=false yarn build` 혹은 `CI=false npm run build`로 업데이트
 
 **해야 할 것**
 
-1. 반응형
+1. 반응형 (https://www.npmjs.com/package/react-responsive)
