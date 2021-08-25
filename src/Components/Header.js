@@ -15,8 +15,14 @@ const Header = styled.header`
   font-size: 22px;
   line-height: 70px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    height: 50px;
+    justify-content: space-between;
+  }
 `;
-
+  
 const LLink = styled(Link)`
   display: block;
   width: 70px;
@@ -25,17 +31,51 @@ const LLink = styled(Link)`
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    width: 50px;
+    height: 50px;
+  }
+`;
+
+const BLinkBox = styled.div`
+  display: none;
+  
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: flex;
+  }
+`;
+
+const PBLink = styled(Link)`
+  display: block;
+  background-image: url("image/icon_arrow_prev.png");
+  width: 32px;
+  height: 32px;
+`;
+
+const NBLink = styled(Link)`
+  display: block;
+  background-image: url("image/icon_arrow_next.png");
+  width: 32px;
+  height: 32px;
 `;
 
 const MenuList = styled.ul`
   display: flex;
+  
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.li`
   padding: 0 20px;
 `;
   
-  const MLink = styled(Link)`
+const MLink = styled(Link)`
   display: block;
   border-bottom: 3px solid 
     ${props => (props.current ? "#ff1744" : "transparent")};
@@ -46,7 +86,7 @@ const MenuItem = styled.li`
   }
 `;
 
-const LinkList = styled.div`
+const LinkBox = styled.div`
   display: flex;
 `;
 
@@ -90,13 +130,35 @@ const LinkYt = styled.a`
   }
 `;
 
-const HeaderComponent = ({ location : { pathname } }) => (
+const HeaderComponent = ({ location : { pathname } }) => {
+  let prevPage = "";
+  let nextPage = "";
+  if(pathname === "/") {
+    prevPage = "/contact";
+    nextPage = "/aboutus/bboy"
+  } else if(pathname.includes("/aboutus")) {
+    prevPage = "/";
+    nextPage = "/portfolio"
+  } else if(pathname === "/portfolio") {
+    prevPage = "/aboutus/bboy";
+    nextPage = "qna"
+  } else if(pathname==="/qna") {
+    prevPage = "/portfolio";
+    nextPage = "contact"
+  } else if(pathname === "/contact") {
+    prevPage = "/qna";
+    nextPage = "/"
+  }
+
+  return (
   <Header>
     <LLink to="/">
       <span className="visually_hidden">ODC 로고</span>
     </LLink>
-    {/* 모바일 메뉴 햄버거 버튼
-    <Link to="" className="link_menu"><span clvisually_hiddenass="visually_hidden">메뉴 로고</span></Link> */}
+    <BLinkBox>
+      <PBLink to={ prevPage }><span className="visually_hidden">전 페이지</span></PBLink>
+      <NBLink to={ nextPage }><span className="visually_hidden">다음 페이지</span></NBLink>
+    </BLinkBox>  
     <MenuList>
       <MenuItem>
         <MLink current={pathname==="/"} to="/">
@@ -124,7 +186,7 @@ const HeaderComponent = ({ location : { pathname } }) => (
         </MLink>
       </MenuItem>
     </MenuList>
-    <LinkList>
+    <LinkBox>
       <LinkIst href="https://www.instagram.com/odc_streetdance/" target="_blank">
         <span className="visually_hidden">인스타그램</span>
       </LinkIst>
@@ -134,8 +196,8 @@ const HeaderComponent = ({ location : { pathname } }) => (
       <LinkYt href="https://www.youtube.com/channel/UC02HqViXJ-uFmqg0K5gCygg" target="_blank">
         <span className="visually_hidden">유투브</span>
       </LinkYt>
-    </LinkList>
+    </LinkBox>
   </Header>
-);
+)};
 
 export default withRouter(HeaderComponent);

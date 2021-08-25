@@ -12,14 +12,15 @@ import LockingComponent from "../Components/AboutUs/Locking";
 import PoppinComponent from "../Components/AboutUs/Poppin";
 import WaackingComponent from "../Components/AboutUs/Waacking";
 
-const Section = styled.section`
-  width: 1000px;
-`;
-
 const List = styled.ul`
   display: flex;
   justify-content: space-evenly;
   color: black;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Item = styled.li`
@@ -46,7 +47,7 @@ export default ({ location: { pathname } }) => {
       <title>About Us | O.D.C</title>
     </Helmet>
     <main className="main">
-      <Section className="animationY_section">
+      <section className="animationY_section">
           <h1 className="visually_hidden">장르 설명</h1>
           <List>
             <Item active={pathname === "/aboutus/bboy"} className="animationY_section">
@@ -87,7 +88,7 @@ export default ({ location: { pathname } }) => {
           <Route path="/aboutus/locking" component={LockingComponent} />
           <Route path="/aboutus/poppin" component={PoppinComponent} />
           <Route path="/aboutus/waacking" component={WaackingComponent} />
-        </Section>
+        </section>
     </main>
   </>
 )};

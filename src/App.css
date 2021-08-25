@@ -79,6 +79,18 @@ h2 {
   margin: 100px auto;
   /* 위아래 100px 고정 */
 }
+
+@media screen and (max-width: 768px),
+screen and (max-height: 768px) and (orientation: landscape) {
+  body {
+    padding-top: 50px;
+  }
+  .main {
+    min-height: calc(100vh - 114px);
+    width: 80%;
+  }
+}
+
 @keyframes appearSectionAnimation{
   from{
       opacity: 0;

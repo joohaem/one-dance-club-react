@@ -7,16 +7,30 @@ const ActivityWrapper = styled.section`
 `;
   
 const Activity = styled.article`
-display: grid;
+  display: grid;
   grid-template-columns: 500px 1fr;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    grid-template-columns: 1fr;
+  }
 `;
   
 const ImgBox = styled.figure`
-position: relative;
+  position: relative;
   height: 40vh;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
 `;
 
-  const Img = styled.img`
+const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -42,9 +56,14 @@ const PrevBtn = styled.button`
     background-color: #ff1744;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    left: 5%;
+  }
 `;
   
-  const NextBtn = styled.button`
+const NextBtn = styled.button`
   position: absolute;
   top: calc(50% - 1.5rem);
   right: 0%;
@@ -64,9 +83,14 @@ const PrevBtn = styled.button`
     background-color: #ff1744;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    right: 5%;
+  }
 `;
   
-  const ContentBox = styled.div`
+const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,17 +98,17 @@ const PrevBtn = styled.button`
   padding: 10%;
 `;
   
-  const Title = styled.h1`
+const Title = styled.h1`
   margin: 30px 0;
 `;
   
-  const CareerWrapper = styled.section`
+const CareerWrapper = styled.section`
   display: flex;
   flex-direction: column;
   text-align: center;
 `;
   
-  const Title2 = styled.h2`
+const Title2 = styled.h2`
   margin: 30px 0;
 `;
 
@@ -97,15 +121,23 @@ export default () => {
   const inclubImgs = {
     1: "image/portfolio/img-inclub1.jpg",
     2: "image/portfolio/img-inclub2.jpg",
-    3: "image/portfolio/img-inclub3.jpg"
+    3: "image/portfolio/img-inclub3.jpg",
+    4: "image/portfolio/img-inclub4.jpg",
+    5: "image/portfolio/img-inclub5.jpg"
   }
   const incollegeImgs = {
     1: "image/portfolio/img-incollege1.jpg",
     2: "image/portfolio/img-incollege2.jpg",
-    3: "image/portfolio/img-incollege3.jpg"
+    3: "image/portfolio/img-incollege3.jpg",
+    4: "image/portfolio/img-incollege4.jpg",
+    5: "image/portfolio/img-incollege5.jpg"
   }
   const outcollegeImgs = {
-    1: "image/portfolio/img-outcollege1.jpg"
+    1: "image/portfolio/img-outcollege1.jpg",
+    2: "image/portfolio/img-outcollege2.jpg",
+    3: "image/portfolio/img-outcollege3.jpg",
+    4: "image/portfolio/img-outcollege4.jpg",
+    5: "image/portfolio/img-outcollege5.jpg"
   }
   let inclubImgNum = 1;
   let incollegeImgNum = 1;

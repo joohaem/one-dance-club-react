@@ -9,11 +9,22 @@ const DesciptionWrapper = styled.section`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: block;
+  }
 `;
 
 const DescriptionImg = styled.img`
   width: 250px;
   height: auto;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: block;
+    margin: 0 auto 50px;
+  }
 `;
 
 const DescriptionText = styled.p`
@@ -21,6 +32,13 @@ const DescriptionText = styled.p`
   text-align: right;
   line-height: 200%;
   word-break: keep-all;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
 `;
 
 const WedoWrapper = styled.section`
@@ -29,6 +47,11 @@ const WedoWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const WedoImg = styled.img`
@@ -40,6 +63,11 @@ const WedoImg = styled.img`
 const WedoText = styled.figcaption`
   margin-top: 20px;
   font-size: 18px;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    text-align: center;
+  }
 `;
 
 const Video = styled.iframe`
@@ -48,6 +76,25 @@ const Video = styled.iframe`
   width: 854px;
   height: 480px; 
   /* 16:9 */
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: none;
+  }
+`;
+
+const VLink = styled.a`
+  display: none;
+  &:hover {
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+  }
 `;
 
 export default () => {
@@ -62,7 +109,7 @@ export default () => {
           <h1 className="visually_hidden">O.D.C</h1>
           <DescriptionImg src="image/odc_logo.png" alt="오디씨 로고" />
           <DescriptionText>
-            Street Dance (B-boy, Choreography, Girl's Hiphop, Hiphop, House, Krump, Locking, Poppin, Waacking) 를 중심으로 하며
+            Street Dance (B-boy, Choreography, Girl's Hiphop, Hiphop, House, Krump, Locking, Popping, Waacking) 를 중심으로 하며
             연습 및 이론학습으로 올바른 Street Dance 문화를 배우고 전파하는 데 목적을 둔다.
             동국대학교 내부 축제 공연 및 행사 공연, 외부 대학교 축제 및
             정기 공연 때 찬조공연, 플래시몹 그리고 외부 대학 댄스 동아리들과 연합공연을 기획하여
@@ -98,6 +145,9 @@ export default () => {
         <section className="animationY_section">
           <h1 className="visually_hidden">odc 홍보 영상</h1>        
           <Video src="https://www.youtube.com/embed/uwhTCpgw4yg" title="오디씨 유투브 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+          <VLink class="odc_video_text" href="https://youtu.be/uwhTCpgw4yg" target="_blank">
+            O.D.C 영상 보러 가기
+          </VLink>
         </section>
       </main>
     </>

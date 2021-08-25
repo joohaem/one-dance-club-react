@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 const Article = styled.article`
   margin: 100px;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    margin: 0;
+  }
 `;
 
 const Image = styled.img`
@@ -11,6 +16,12 @@ const Image = styled.img`
   height: 350px;
   margin: 70px auto;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Explain = styled.div`
@@ -18,6 +29,13 @@ const Explain = styled.div`
   text-align: right;
   margin-left: auto;
   line-height: 200%;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
 `;
 
 const H3 = styled.h3`

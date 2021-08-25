@@ -13,6 +13,12 @@ const Title = styled.h1`
 const WayBox = styled.article`
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const WayImgBox = styled.div`
@@ -23,6 +29,13 @@ const WayImg = styled.img`
   /* 3:4 */
   width: 480px;
   height: 560px;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    /* 3:4 */
+    width: 270px;
+    height: 360px;
+  }
 `;
 
 const PrevBtn = styled.button`
@@ -74,6 +87,11 @@ const WayText = styled.p`
   flex-direction: column;
   justify-content: center;
   line-height: 300%;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    margin-top: 20px;
+  }
 `;
 
 const JoinWrapper = styled.section`
@@ -82,9 +100,15 @@ const JoinWrapper = styled.section`
 
 const JoinImg = styled.img`
   display: block;
-  width: 800px;
+  width: 600px;
   height: auto;
   margin: 0 auto;
+
+  
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    width: 100%;
+  }
 `;
 
 const ExecutivesWrapper = styled.section`
@@ -94,12 +118,23 @@ const ExecutivesWrapper = styled.section`
 const ExecutivesBox = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ExecutiveImg = styled.img`
   width: 200px;
   height: auto;
   border-radius: 50%;
+  
+  @media screen and (max-width: 768px),
+  screen and (max-height: 768px) and (orientation: landscape) {
+    margin-top: 30px;
+  }
 `;
 
 const ExecutiveName = styled.p`

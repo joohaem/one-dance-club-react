@@ -63,6 +63,14 @@ https://friendly-snyder-4bece3.netlify.app/#/
 
     - Site setting 메뉴 -> Build & Deploy -> Edit Setting -> Build Command에서 `CI=false yarn build` 혹은 `CI=false npm run build`로 업데이트
 
+11. 반응형은 `styled-component`안 미디어 쿼리로 진행 (react-responsive 공부하기)
+    
+    + [react-responsive 참고1; 공식문서](https://www.npmjs.com/package/react-responsive)
+
+    + [react-responsive 참고2; 블로그](https://eblee-repo.tistory.com/48?category=742647)
+
 **해야 할 것**
 
-1. 반응형 (https://www.npmjs.com/package/react-responsive)
+1. 비보이 링크 바꾸기
+
+2. AboutUs 장르 통합 코드
