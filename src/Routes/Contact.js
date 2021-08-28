@@ -163,7 +163,10 @@ const ImgIst = styled.img`
 export default () => {
   const wayImgs = {
     1: "image/contact/img-way1.jpg",
-    2: "image/contact/img-way2.jpg"
+    2: "image/contact/img-way2.jpg",
+    3: "image/contact/img-way3.jpg",
+    4: "image/contact/img-way4.jpg",
+    5: "image/contact/img-way5.jpg"
   }
   let imgNum = 1;
   
@@ -203,8 +206,8 @@ export default () => {
             </WayImgBox>
             <WayText>
               1. 충무로역 1번 출구에서 나온 사진/ 쭉 직진<br />
-              2. 우회전하는곳 사진 (그 두끼있는 건물에서)<br />
-              3. 좌회전하는곳 사진 (빠바있는곳)<br />
+              2. 우회전하는곳 사진 (두끼 있는 건물)<br />
+              3. 좌회전하는곳 사진 (파리바게트)<br />
               4. 후문 들어가는 사진/ 후문에서 우회전<br />
               5. 5층 맨끝 복도 odc 동방 사진<br />
             </WayText>
