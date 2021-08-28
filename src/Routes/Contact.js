@@ -160,6 +160,7 @@ const ImgIst = styled.img`
 `;
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const wayImgs = {
     1: "image/contact/img-way1.jpg",

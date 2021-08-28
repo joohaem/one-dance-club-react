@@ -78,6 +78,7 @@ const IconArrow = styled.div`
   }
 `;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const toggling = (e) => {
     const arrowImg = e.target;

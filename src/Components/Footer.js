@@ -27,6 +27,7 @@ const IImage = styled.img`
 
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <Footer>
     <ILink href="https://instagram.com/joamjoam_2/" target="_blank">

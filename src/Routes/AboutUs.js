@@ -39,6 +39,7 @@ const Item = styled.li`
 `;
 
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default ({ location: { pathname } }) => {
   
   return (

@@ -117,6 +117,7 @@ font-size: 18px;
 margin: 10px 0;
 `;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const inclubImgs = {
     1: "image/portfolio/img-inclub1.jpg",
