@@ -27,6 +27,7 @@ const Item = styled.li`
   border: none;
   border-radius: 5px;
   padding: 2px 5px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 500;
   transition: all 0.2s ease-in-out;

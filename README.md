@@ -71,6 +71,10 @@ https://friendly-snyder-4bece3.netlify.app/#/
 
 **해야 할 것**
 
-1. 비보이 링크 바꾸기
+0. 도메인
 
-2. AboutUs 장르 통합 코드
+1. 이미지 처리 (skeleton / 리액트 쿼리)
+
+2. 웹팩 / 바벨
+
+3. AboutUs 장르 통합 코드

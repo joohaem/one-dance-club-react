@@ -146,7 +146,7 @@ export default () => {
         <section className="animationY_section">
           <h1 className="visually_hidden">odc 홍보 영상</h1>        
           <Video src="https://www.youtube.com/embed/uwhTCpgw4yg" title="오디씨 유투브 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-          <VLink class="odc_video_text" href="https://youtu.be/uwhTCpgw4yg" target="_blank">
+          <VLink className="odc_video_text" href="https://youtu.be/uwhTCpgw4yg" target="_blank">
             O.D.C 영상 보러 가기
           </VLink>
         </section>
