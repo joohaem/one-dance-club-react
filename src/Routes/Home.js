@@ -123,22 +123,22 @@ export default () => {
           <h1 className="visually_hidden">what we do?</h1>
 
           <figure>
-            <WedoImg src="image/home/practice.jpg" />
+            <WedoImg src="image/home/practice.png" />
             <WedoText>매주 정기연습</WedoText>
           </figure>
         
           <figure>
-            <WedoImg src="image/home/inCollege.jpg" />
+            <WedoImg src="image/home/inCollege.png" />
             <WedoText>다양한 교내 축제활동</WedoText>
           </figure>
 
           <figure>
-            <WedoImg src="image/home/mt.jpg" />
+            <WedoImg src="image/home/mt.png" />
             <WedoText>동아리 내 친목활동</WedoText>
           </figure>
 
           <figure>
-            <WedoImg src="image/home/outCollege.jpg" />
+            <WedoImg src="image/home/outCollege.png" />
             <WedoText>교외 외부활동</WedoText>
           </figure>
         </WedoWrapper>

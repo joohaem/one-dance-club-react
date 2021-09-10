@@ -56,7 +56,7 @@ export default () => {
 
   return (
     <Article className="animationY_section">
-      <Image src="image/aboutus/house.jpg" alt="사진" />
+      <Image src="image/aboutus/house.png" alt="사진" />
       <Explain>
         <h1>하우스</h1>
         <H3>하우스 음악에 맞춰 추는 클럽용 댄스가 시초이며, 빠른 스텝과 그루브에서 나오는 풍부한 박자감, 음악의 특성상 빠른 진행을 보이는 템포, 변화무쌍하게 음악의 리듬을 풋워크으로 표현하는 춤입니다.</H3> 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Helmet from "react-helmet";
+// import prtImg from "image/portfolio/img-inclub1.png";
 
 const ActivityWrapper = styled.section`
   padding-bottom: 100px;
@@ -120,25 +121,25 @@ margin: 10px 0;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const inclubImgs = {
-    1: "image/portfolio/img-inclub1.jpg",
-    2: "image/portfolio/img-inclub2.jpg",
-    3: "image/portfolio/img-inclub3.jpg",
-    4: "image/portfolio/img-inclub4.jpg",
-    5: "image/portfolio/img-inclub5.jpg"
+    1: "image/portfolio/img-inclub1.png",
+    2: "image/portfolio/img-inclub2.png",
+    3: "image/portfolio/img-inclub3.png",
+    4: "image/portfolio/img-inclub4.png",
+    5: "image/portfolio/img-inclub5.png"
   }
   const incollegeImgs = {
-    1: "image/portfolio/img-incollege1.jpg",
-    2: "image/portfolio/img-incollege2.jpg",
-    3: "image/portfolio/img-incollege3.jpg",
-    4: "image/portfolio/img-incollege4.jpg",
-    5: "image/portfolio/img-incollege5.jpg"
+    1: "image/portfolio/img-incollege1.png",
+    2: "image/portfolio/img-incollege2.png",
+    3: "image/portfolio/img-incollege3.png",
+    4: "image/portfolio/img-incollege4.png",
+    5: "image/portfolio/img-incollege5.png"
   }
   const outcollegeImgs = {
-    1: "image/portfolio/img-outcollege1.jpg",
-    2: "image/portfolio/img-outcollege2.jpg",
-    3: "image/portfolio/img-outcollege3.jpg",
-    4: "image/portfolio/img-outcollege4.jpg",
-    5: "image/portfolio/img-outcollege5.jpg"
+    1: "image/portfolio/img-outcollege1.png",
+    2: "image/portfolio/img-outcollege2.png",
+    3: "image/portfolio/img-outcollege3.png",
+    4: "image/portfolio/img-outcollege4.png",
+    5: "image/portfolio/img-outcollege5.png"
   }
   let inclubImgNum = 1;
   let incollegeImgNum = 1;
@@ -207,7 +208,7 @@ export default () => {
         <ActivityWrapper>
           <Activity className="animationX_section">
             <ImgBox>
-              <Img src="image/portfolio/img-inclub1.jpg"/>
+              <Img src="image/portfolio/img-inclub1.png"/>
               <PrevBtn onClick={ (e) => prevImg(inclubImgNum, 1, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(inclubImgNum, 1, e) }>»</NextBtn>
             </ImgBox>
@@ -223,7 +224,7 @@ export default () => {
               <p>교내 학생들을 대상으로 하는 공연들에 참여합니다.</p>
             </ContentBox>
             <ImgBox>
-              <Img src="image/portfolio/img-incollege1.jpg" />
+              <Img src="image/portfolio/img-incollege1.png" />
               <PrevBtn onClick={ (e) => prevImg(incollegeImgNum, 2, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(incollegeImgNum, 2, e) }>»</NextBtn>
             </ImgBox>
@@ -231,7 +232,7 @@ export default () => {
 
           <Activity className="animationX_section">
             <ImgBox>
-              <Img src="image/portfolio/img-outcollege1.jpg" />
+              <Img src="image/portfolio/img-outcollege1.png" />
               <PrevBtn onClick={ (e) => prevImg(outcollegeImgNum, 3, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(outcollegeImgNum, 3, e) }>»</NextBtn>
             </ImgBox>

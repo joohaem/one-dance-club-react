@@ -56,7 +56,7 @@ export default () => {
 
   return (
     <Article className="animationY_section">
-      <Image src="image/aboutus/krump.jpg" alt="사진" />
+      <Image src="image/aboutus/krump.png" alt="사진" />
       <Explain>
         <h1>크럼프</h1>
         <H3>에너지를 가지고 노는 춤으로서 자유롭고 격렬하며 역동적인 움직임이 특징인 춤입니다. 가슴을 튕기는 체스트 팝(Chest Pop), 팔을 휘두르는 암 스윙(Arm Swing), 발을 구르는 스텀프(Stomp) 등의 기술로 이루어지며 그 외에 부가적인 요소로서 모자와 신발, 옷 등 도구를 이용하는 트릭을 선보이기도 합니다.</H3> 

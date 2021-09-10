@@ -56,7 +56,7 @@ export default () => {
 
   return (
     <Article className="animationY_section">
-      <Image src="image/aboutus/girlhip.jpg" alt="사진" />
+      <Image src="image/aboutus/girlhip.png" alt="사진" />
       <Explain>
         <h1>걸스힙합</h1>
         <H3>여성스러운 이미지와 느낌을 살려 아름다움을 표현하며 섬세한 기술과 표현력을 중요시하고, 섹시함과 파워풀함이 함께 느껴지는 춤입니다.</H3> 

@@ -56,7 +56,7 @@ export default () => {
 
   return (
     <Article className="animationY_section">
-      <Image src="image/aboutus/bboy.jpg" alt="사진" />
+      <Image src="image/aboutus/bboy.png" alt="사진" />
       <Explain>
         <h1>비보이</h1>
         <H3>70년대 초 브레이킹 비트가 사용되기 시작하면서 생긴 춤입니다. 스트리트 댄스 중 유일하게 플로어 중심의 무빙을 하며 스트리트 댄스 배틀 문화를 주도하는 장르입니다. 스타일 무브, 파워 무브, 프리즈 무브 등으로 동작이 나뉘며 화려함과 박력을 가지고 있는 춤입니다.</H3> 

@@ -27,7 +27,7 @@ const WayImgBox = styled.div`
 
 const WayImg = styled.img`
   /* 3:4 */
-  width: 480px;
+  width: 420px;
   height: 560px;
 
   @media screen and (max-width: 768px),
@@ -163,11 +163,11 @@ const ImgIst = styled.img`
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
   const wayImgs = {
-    1: "image/contact/img-way1.jpg",
-    2: "image/contact/img-way2.jpg",
-    3: "image/contact/img-way3.jpg",
-    4: "image/contact/img-way4.jpg",
-    5: "image/contact/img-way5.jpg"
+    1: "image/contact/img-way1.png",
+    2: "image/contact/img-way2.png",
+    3: "image/contact/img-way3.png",
+    4: "image/contact/img-way4.png",
+    5: "image/contact/img-way5.png"
   }
   let imgNum = 1;
   
@@ -201,7 +201,7 @@ export default () => {
           <Title>동아리방 가는 길</Title>
           <WayBox>
             <WayImgBox>
-              <WayImg src="image/contact/img-way1.jpg" alt="가는 길" />
+              <WayImg src="image/contact/img-way1.png" alt="가는 길" />
               <PrevBtn onClick={ (e) => prevImg(imgNum, e) }>«</PrevBtn>
               <NextBtn onClick={ (e) => nextImg(imgNum, e) }>»</NextBtn>
             </WayImgBox>
@@ -220,7 +220,7 @@ export default () => {
           <JoinWrapper className="animationY_section">
             <Title>가입 절차</Title>
             <article>
-              <JoinImg src="image/contact/join_step.jpg" alt="가입절차 이미지" />
+              <JoinImg src="image/contact/join_step.png" alt="가입절차 이미지" />
             </article>
           </JoinWrapper>
           
@@ -229,7 +229,7 @@ export default () => {
             <Title>임원진</Title>
             <ExecutivesBox>
               <article>
-                <ExecutiveImg src="image/contact/president.jpg" alt="회장" />
+                <ExecutiveImg src="image/contact/president.png" alt="회장" />
                 <ExecutiveName>회장 최화인</ExecutiveName>
                 <ExecutiveNum>010-7611-9475</ExecutiveNum>
                 <ILink href="https://instagram.com/im_fine_tk/" target="_blank">
@@ -238,7 +238,7 @@ export default () => {
                 </ILink>
               </article>
               <article>
-                <ExecutiveImg src="image/contact/vice_president.jpg" alt="부회장" />
+                <ExecutiveImg src="image/contact/vice_president.png" alt="부회장" />
                 <ExecutiveName>부회장 김민규</ExecutiveName>
                 <ExecutiveNum>010-9330-1689</ExecutiveNum>
                 <ILink href="https://instagram.com/00__ggyu/" target="_blank">
@@ -247,7 +247,7 @@ export default () => {
                 </ILink>
               </article>
               <article>
-                <ExecutiveImg src="image/contact/treasurer.jpg" alt="총무" />
+                <ExecutiveImg src="image/contact/treasurer.png" alt="총무" />
                 <ExecutiveName>총무 김현이</ExecutiveName>
                 <ExecutiveNum>010-9699-2416</ExecutiveNum>
                 <ILink href="https://instagram.com/illumin2us/" target="_blank">
