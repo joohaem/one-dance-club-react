@@ -108,7 +108,7 @@ export default () => {
       <main className="main">
         <DesciptionWrapper className="animationY_section">
           <h1 className="visually_hidden">O.D.C</h1>
-          <DescriptionImg src="image/odc_logo.png" alt="오디씨 로고" />
+          <DescriptionImg src="image/odc_logo_home.png" alt="오디씨 로고" />
           <DescriptionText>
             Street Dance (B-boy, Choreography, Girl's Hiphop, Hiphop, House, Krump, Locking, Popping, Waacking) 를 중심으로 하며
             연습 및 이론학습으로 올바른 Street Dance 문화를 배우고 전파하는 데 목적을 둔다.

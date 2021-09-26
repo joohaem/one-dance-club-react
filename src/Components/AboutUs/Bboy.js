@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import Skeleton from "react-loading-skeleton";
 
 const Article = styled.article`
   margin: 100px;
 
   @media screen and (max-width: 768px),
-  screen and (max-height: 768px) and (orientation: landscape) {
+    screen and (max-height: 768px) and (orientation: landscape) {
     margin: 0;
   }
 `;
@@ -18,7 +19,7 @@ const Image = styled.img`
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 
   @media screen and (max-width: 768px),
-  screen and (max-height: 768px) and (orientation: landscape) {
+    screen and (max-height: 768px) and (orientation: landscape) {
     width: 100%;
     height: auto;
   }
@@ -31,7 +32,7 @@ const Explain = styled.div`
   line-height: 200%;
 
   @media screen and (max-width: 768px),
-  screen and (max-height: 768px) and (orientation: landscape) {
+    screen and (max-height: 768px) and (orientation: landscape) {
     width: 100%;
     text-align: center;
     margin-left: 0;
@@ -53,15 +54,38 @@ const YoutubeLink = styled.a`
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
+  const [loading, setLoading] = useState(false);
+  const endLoading = () => setLoading(true);
+  useEffect(() => setLoading(true), []);
 
+  // 위에 코드 확인하기
+  // 에러 없애기
+  // 사진 delay 두어 확인하기
   return (
     <Article className="animationY_section">
-      <Image src="image/aboutus/bboy.png" alt="사진" />
-      <Explain>
-        <h1>비보이</h1>
-        <H3>70년대 초 브레이킹 비트가 사용되기 시작하면서 생긴 춤입니다. 스트리트 댄스 중 유일하게 플로어 중심의 무빙을 하며 스트리트 댄스 배틀 문화를 주도하는 장르입니다. 스타일 무브, 파워 무브, 프리즈 무브 등으로 동작이 나뉘며 화려함과 박력을 가지고 있는 춤입니다.</H3> 
-        <YoutubeLink href="https://youtu.be/GziBBrac0K4" target="_blank">장르 관련 영상 보기</YoutubeLink>
-      </Explain>
+      {loading ? (
+        <>
+          <Image
+            src="image/aboutus/bboy.png"
+            alt="사진"
+            onLoad={() => endLoading()}
+          />
+          <Explain>
+            <h1>비보이</h1>
+            <H3>
+              70년대 초 브레이킹 비트가 사용되기 시작하면서 생긴 춤입니다.
+              스트리트 댄스 중 유일하게 플로어 중심의 무빙을 하며 스트리트 댄스
+              배틀 문화를 주도하는 장르입니다. 스타일 무브, 파워 무브, 프리즈
+              무브 등으로 동작이 나뉘며 화려함과 박력을 가지고 있는 춤입니다.
+            </H3>
+            <YoutubeLink href="https://youtu.be/GziBBrac0K4" target="_blank">
+              장르 관련 영상 보기
+            </YoutubeLink>
+          </Explain>
+        </>
+      ) : (
+        <Skeleton />
+      )}
     </Article>
   );
 };

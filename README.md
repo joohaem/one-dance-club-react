@@ -73,8 +73,8 @@ https://friendly-snyder-4bece3.netlify.app/#/
 
 0. 도메인 (유료)
 
-1. 이미지 처리 (Sprites; 여러 이미지를 하나의 이미지로 합쳐 잘라 사용하도록 / skeleton; 대기 중 아이콘 출력 / 리액트 쿼리; useQuery)
+1. Webpack (여러 모듈을 하나의 파일로 묶어 네트워크 비용 낭비 줄임) / Babel (ES6 -> ES5 Transpiler)
 
-2. Webpack (여러 모듈을 하나의 파일로 묶어 네트워크 비용 낭비 줄임) / Babel (ES6 -> ES5 Transpiler)
+2. AboutUs 장르 통합 코드
 
-3. AboutUs 장르 통합 코드
+3. 이미지 처리 (Sprites; 여러 이미지를 하나의 이미지로 합쳐 잘라 사용하도록 / [Skeleton](https://www.npmjs.com/package/react-loading-skeleton); 대기 중 아이콘 출력 / 리액트 쿼리; useQuery)
